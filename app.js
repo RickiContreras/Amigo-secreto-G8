@@ -3,6 +3,12 @@
 let listaAmigos = []
 
 
+function agregarAmigo() {
+    let nombreDeAmigo = document.getElementById('amigo').value;
+    console.log(nombreDeAmigo);
+    
+}
+
 
 //A modo de practica voy a cambiar el texto Amigo Secreto, manipulando el DOM
 let cambioTitulo = document.querySelector('h1');
