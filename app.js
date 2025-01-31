@@ -15,7 +15,12 @@ let listaAmigos = []
 //Con la función siguiente capturo el texto (nombre), que ingreso el usuario en el campo de entrada. Ademas con el console.log verifico que lo escrito por el usurios se vea impreso en la consola.
 function agregarAmigo() {
     let nombreDeAmigo = document.getElementById('amigo').value;
+    
+//Con el condicional IF llamando a la variable y el metodo TRIM(elimina espacios vacios), verifico que al pulsar el boton Añadir el campo de entrada no quede vacio. Con alert le pido al usuario que ingrese un nombre.    
+    if (nombreDeAmigo.trim() === '') {
+        alert("Por favor, inserte un nombre.");
+    }
     console.log(nombreDeAmigo);
+    return;
+    
 }
-
-
