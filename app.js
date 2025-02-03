@@ -18,19 +18,20 @@ function agregarAmigo() {
     nombreDeAmigo = document.getElementById('amigo').value;
 
 //Con el condicional IF y la expresión regurlar /\d/.test y llamando a la variable agregarAmigo verifica que el usuario solo pueda ingresar textos sin numeros     
-    if (/\d/.test(nombreDeAmigo)) {
+  /*  if (/\d/.test(nombreDeAmigo)) {
         alert("Por favor, ingrese un nombre válido.");
         
-    }
+    }*/
     
 //Con el condicional IF llamando a la variable agregarAmigo y el metodo TRIM(elimina espacios vacios), verifico que al pulsar el boton Añadir el campo de entrada no quede vacio. Con alert le pido al usuario que ingrese un nombre.    
-    if (nombreDeAmigo.trim() === '') {
+   /* if (nombreDeAmigo.trim() === '') {
         alert("Por favor, inserte un nombre.");
-    }
+    }*/
 
 //Llamando a la lista "listaAmigos" con el metodo ".push()" los nombres ingresados por el usuario se agragan al array
     
     if (/\d/.test(nombreDeAmigo) || nombreDeAmigo.trim() === '') {
+        alert("Por favor, ingrese un nombre válido.");
         //console.log("Error: El nombre no puede contener números ni estar vacío.");
     } else {
         // Si es un nombre válido, lo agregamos al array
