@@ -9,22 +9,39 @@ let cambioIndicacion = document.querySelector('h2');
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 //Crea la lista de amigos. Esta lista debe ser ingresada por el usuario. se debe presentar en pantalla.
-let listaAmigos = []
+let listaAmigos = [];
 let nombreDeAmigo = '';
+
 
 //Con la función siguiente capturo el texto (nombre), que ingreso el usuario en el campo de entrada. Ademas con el console.log verifico que lo escrito por el usurios se vea impreso en la consola.
 function agregarAmigo() {
     nombreDeAmigo = document.getElementById('amigo').value;
 
-//Con el condicional IF con la expresión regurlar /\d/.test y llamando a la variable agregarAmigo verifica que el usuario solo pueda ingresar textos sin numeros     
+//Con el condicional IF y la expresión regurlar /\d/.test y llamando a la variable agregarAmigo verifica que el usuario solo pueda ingresar textos sin numeros     
     if (/\d/.test(nombreDeAmigo)) {
         alert("Por favor, ingrese un nombre válido.");
-        return;
+        
     }
-//Con el condicional IF llamando a la variable y el metodo TRIM(elimina espacios vacios), verifico que al pulsar el boton Añadir el campo de entrada no quede vacio. Con alert le pido al usuario que ingrese un nombre.    
+    
+//Con el condicional IF llamando a la variable agregarAmigo y el metodo TRIM(elimina espacios vacios), verifico que al pulsar el boton Añadir el campo de entrada no quede vacio. Con alert le pido al usuario que ingrese un nombre.    
     if (nombreDeAmigo.trim() === '') {
         alert("Por favor, inserte un nombre.");
     }
+
+//Llamando a la lista "listaAmigos" con el metodo ".push()" los nombres ingresados por el usuario se agragan al array
+    
+    if (/\d/.test(nombreDeAmigo) || nombreDeAmigo.trim() === '') {
+        //console.log("Error: El nombre no puede contener números ni estar vacío.");
+    } else {
+        // Si es un nombre válido, lo agregamos al array
+        listaAmigos.push(nombreDeAmigo);
+       // console.log(`Amigo agregado: ${nombreDeAmigo}`);
+    }
+
+   
+    console.log(listaAmigos);
     console.log(nombreDeAmigo);
+
+    
     return;
 }
