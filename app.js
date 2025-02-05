@@ -37,12 +37,23 @@ function agregarAmigo() {
         // Si es un nombre válido, lo agregamos al array
         listaAmigos.push(nombreDeAmigo);
        // console.log(`Amigo agregado: ${nombreDeAmigo}`);
-    }
 
+       limpiarCampoEntrada();
+    }
    
     console.log(listaAmigos);
     console.log(nombreDeAmigo);
-
     
     return;
+}
+
+function limpiarCampoEntrada () {
+    document.querySelector('#amigo').value = '';
+    
+}
+
+function verficarLista () {
+    if (listaAmigos.length === '') {
+        
+    }
 }
