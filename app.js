@@ -40,20 +40,26 @@ function agregarAmigo() {
 
        limpiarCampoEntrada();
     }
-   
+    mostrarAmigoAgregado();
     console.log(listaAmigos);
     console.log(nombreDeAmigo);
     
     return;
 }
-
+// Con esta función llamando al id ('amigo') del código HTML indicando (value = '') al pulsar el boton "Añadir amigo" el campo de entrada se borra quedando listo para recibir otro nombre.
 function limpiarCampoEntrada () {
     document.querySelector('#amigo').value = '';
     
 }
 
-function verficarLista () {
-    if (listaAmigos.length === '') {
-        
-    }
+
+function mostrarAmigoAgregado () {
+    let lista = document.getElementById('listaAmigos'); //Obtengo el elemento de la lista con document.getElementById()
+    lista.innerHTML = ''; // Limpio la lista antes de actualizar
+    
+    listaAmigos.forEach(function(amigo) {
+        let li = document.createElement('li');
+        li.textContent = amigo;
+        lista.appendChild(li);
+    })
 }
