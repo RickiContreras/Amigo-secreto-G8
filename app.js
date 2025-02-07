@@ -64,3 +64,8 @@ function mostrarAmigoAgregado () {
         lista.appendChild(li); //Agrega el elemento <li> a la lista existente, listaAmigos en el HTML, con esto se logra ver el nombre de los amigos ingresados por el usuario en la interface de la web amigo secreto.
     })
 }
+
+function sortearAmigos () {
+    if (listaAmigos = )
+
+}
