@@ -41,6 +41,7 @@ function agregarAmigo() {
        limpiarCampoEntrada();
     }
     mostrarAmigoAgregado();
+    sortearAmigos();
     console.log(listaAmigos);
     console.log(nombreDeAmigo);
     
@@ -66,6 +67,11 @@ function mostrarAmigoAgregado () {
 }
 
 function sortearAmigos () {
-    if (listaAmigos = )
-
+    console.log(listaAmigos.length === 0 ? 'Array vacío.' : 'Array tiene elementos.');
+    /*  if (listaAmigos.length === 0) {
+        console.log('Array vacio');
+    } else {
+        console.log('Array lleno');
+    }*/
+    return;
 }
