@@ -57,9 +57,10 @@ function mostrarAmigoAgregado () {
     let lista = document.getElementById('listaAmigos'); //Obtengo el elemento de la lista con document.getElementById()
     lista.innerHTML = ''; // Limpio la lista antes de actualizar
     
+    //Con el metodo forEach se crea un bucle (for) para recorrer el array listaAmigos
     listaAmigos.forEach(function(amigo) {
-        let li = document.createElement('li');
-        li.textContent = amigo;
-        lista.appendChild(li);
+        let li = document.createElement('li'); //Crea un nuevo elemento <li>
+        li.textContent = amigo; //Agrega texto dentro del <li>, con este método se agrega el texto ingresado por el usuario.
+        lista.appendChild(li); //Agrega el elemento <li> a la lista existente, listaAmigos en el HTML, con esto se logra ver el nombre de los amigos ingresados por el usuario en la interface de la web amigo secreto.
     })
 }
