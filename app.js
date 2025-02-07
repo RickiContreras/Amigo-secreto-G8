@@ -44,7 +44,8 @@ function agregarAmigo() {
     sortearAmigos();
     console.log(listaAmigos);
     console.log(nombreDeAmigo);
-    
+    generarIndiceAleatorio();
+
     return;
 }
 // Con esta función llamando al id ('amigo') del código HTML indicando (value = '') al pulsar el boton "Añadir amigo" el campo de entrada se borra quedando listo para recibir otro nombre.
@@ -67,11 +68,19 @@ function mostrarAmigoAgregado () {
 }
 
 function sortearAmigos () {
-    console.log(listaAmigos.length === 0 ? 'Array vacío.' : 'Array tiene elementos.');
+    console.log(listaAmigos.length === 0 ? 'Array vacío.' : 'Array lleno.');
     /*  if (listaAmigos.length === 0) {
         console.log('Array vacio');
     } else {
         console.log('Array lleno');
-    }*/
+    }*/ //Resumi el condicional if con el operador ternario
     return;
+
+}
+
+function generarIndiceAleatorio () {
+    let indiceGenerado =  Math.floor(Math.random()*10);
+
+    console.log(indiceGenerado);
+    
 }
