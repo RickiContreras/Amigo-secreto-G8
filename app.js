@@ -89,5 +89,16 @@ function sortearAmigo () {
     mostrarAmigoElegido = document.getElementById('resultado');//Al declarar la variable mostrarAmigoElegido y con getElementById puedo manejar la lista ul para ver el amigoSeleccionado
     mostrarAmigoElegido.innerHTML = `El amigo sorteado es: ${amigoSeleccionado}`; //La variable mostrarAmigoElegido muestra el texto guardado en la variable amigoSeleccionado
     console.log(amigoSeleccionado);
+
+    document.querySelector("#listaAmigos").innerHTML = ""; //Con este metodo borramos todo los elementos de una lista <ul>
+
+
+    //listaAmigos.length = 0;
     
+   // limpiarListaAmigos();
 }
+
+/*function limpiarListaAmigos () {
+    document.querySelector('#listaAmigos').value = '';
+    
+}*/
