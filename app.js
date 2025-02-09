@@ -11,7 +11,7 @@ let cambioIndicacion = document.querySelector('h2');
 //Crea la lista de amigos. Esta lista debe ser ingresada por el usuario. se debe presentar en pantalla.
 let listaAmigos = [];
 let nombreDeAmigo = '';
-
+let botonSortearAmigo = '';
 
 //Con la función siguiente capturo el texto (nombre), que ingreso el usuario en el campo de entrada. Ademas con el console.log verifico que lo escrito por el usurios se vea impreso en la consola.
 function agregarAmigo() {
@@ -40,13 +40,13 @@ function agregarAmigo() {
 
        limpiarCampoEntrada();
     }
-    mostrarAmigoAgregado();
-    sortearAmigos();
+    
     console.log(listaAmigos);
     console.log(nombreDeAmigo);
-    generarIndiceAleatorio();
+    mostrarAmigoAgregado();
+    verificarlistaAmigos();
+   // generarIndiceAleatorio();
 
-    return;
 }
 // Con esta función llamando al id ('amigo') del código HTML indicando (value = '') al pulsar el boton "Añadir amigo" el campo de entrada se borra quedando listo para recibir otro nombre.
 function limpiarCampoEntrada () {
@@ -67,20 +67,25 @@ function mostrarAmigoAgregado () {
     })
 }
 
-function sortearAmigos () {
-    console.log(listaAmigos.length === 0 ? 'Array vacío.' : 'Array lleno.');
-    /*  if (listaAmigos.length === 0) {
-        console.log('Array vacio');
+function verificarlistaAmigos () {
+    //console.log(listaAmigos.length === 0 ? 'Ingrese un nombre válido.' : generarIndiceAleatorio());
+    //Resumi el condicional if con el operador ternario, pero no es adecuado para llamar a una función
+    //alert(listaAmigos.length === 0 ? 'Array vacío.' : 'Array lleno.');
+    if (listaAmigos.length === 0) {
+        console.log('Ingrese un nombre válido.');
     } else {
-        console.log('Array lleno');
-    }*/ //Resumi el condicional if con el operador ternario
-    return;
-
+        //generarIndiceAleatorio();
+        console.log('Nombre válido.');
+    } 
+    
 }
+//Esta función genera un número aleatorio entre 0 y el tamaño del array listaAmigos para elegir un amigo de la lista
+function sortearAmigo () {
+    botonSortearAmigo = document.getElementById('amigoElegido')
+    let indiceGenerado =  Math.floor(Math.random()*listaAmigos.length);
+    let amigoSeleccionado = listaAmigos[indiceGenerado]; // la variable amigoSeleccionado almacena el amigo seleccionado
 
-function generarIndiceAleatorio () {
-    let indiceGenerado =  Math.floor(Math.random()*10);
-
-    console.log(indiceGenerado);
+    .innerHTML = 'resultado'
+    console.log(amigoSeleccionado);
     
 }
