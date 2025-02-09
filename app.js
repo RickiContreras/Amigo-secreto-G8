@@ -42,8 +42,8 @@ function agregarAmigo() {
        limpiarCampoEntrada();
     }
     
-    console.log(listaAmigos);
-    console.log(nombreDeAmigo);
+    //console.log(listaAmigos);
+    //console.log(nombreDeAmigo);
     mostrarAmigoAgregado();
     verificarlistaAmigos();
    // generarIndiceAleatorio();
@@ -73,10 +73,10 @@ function verificarlistaAmigos () {
     //Resumi el condicional if con el operador ternario, pero no es adecuado para llamar a una función
     //alert(listaAmigos.length === 0 ? 'Array vacío.' : 'Array lleno.');
     if (listaAmigos.length === 0) {
-        console.log('Ingrese un nombre válido.');
+        //console.log('Ingrese un nombre válido.');
     } else {
         //generarIndiceAleatorio();
-        console.log('Nombre válido.');
+       // console.log('Nombre válido.');
     } 
     
 }
@@ -88,17 +88,17 @@ function sortearAmigo () {
 
     mostrarAmigoElegido = document.getElementById('resultado');//Al declarar la variable mostrarAmigoElegido y con getElementById puedo manejar la lista ul para ver el amigoSeleccionado
     mostrarAmigoElegido.innerHTML = `El amigo sorteado es: ${amigoSeleccionado}`; //La variable mostrarAmigoElegido muestra el texto guardado en la variable amigoSeleccionado
-    console.log(amigoSeleccionado);
+    //console.log(amigoSeleccionado);
 
     document.querySelector("#listaAmigos").innerHTML = ""; //Con este metodo borramos todo los elementos de una lista <ul>
 
 
-    //listaAmigos.length = 0;
     
-   // limpiarListaAmigos();
+    
+  // limpiarListaAmigos();
 }
 
 /*function limpiarListaAmigos () {
-    document.querySelector('#listaAmigos').value = '';
+    document.querySelector('#listaAmigos').innerHTML = '';
     
 }*/
