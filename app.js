@@ -12,6 +12,7 @@ let cambioIndicacion = document.querySelector('h2');
 let listaAmigos = [];
 let nombreDeAmigo = '';
 let botonSortearAmigo = '';
+let mostrarAmigoElegido = '';
 
 //Con la función siguiente capturo el texto (nombre), que ingreso el usuario en el campo de entrada. Ademas con el console.log verifico que lo escrito por el usurios se vea impreso en la consola.
 function agregarAmigo() {
@@ -85,7 +86,8 @@ function sortearAmigo () {
     let indiceGenerado =  Math.floor(Math.random()*listaAmigos.length);
     let amigoSeleccionado = listaAmigos[indiceGenerado]; // la variable amigoSeleccionado almacena el amigo seleccionado
 
-    .innerHTML = 'resultado'
+    mostrarAmigoElegido = document.getElementById('resultado');//Al declarar la variable mostrarAmigoElegido y con getElementById puedo manejar la lista ul para ver el amigoSeleccionado
+    mostrarAmigoElegido.innerHTML = `El amigo sorteado es: ${amigoSeleccionado}`; //La variable mostrarAmigoElegido muestra el texto guardado en la variable amigoSeleccionado
     console.log(amigoSeleccionado);
     
 }
