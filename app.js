@@ -33,15 +33,14 @@ function agregarAmigo() {
     
     if (/\d/.test(nombreDeAmigo) || nombreDeAmigo.trim() === '') {
         alert("Por favor, ingrese un nombre válido.");
-        //console.log("Error: El nombre no puede contener números ni estar vacío.");
+        
     } else {
         // Si es un nombre válido, lo agregamos al array
         listaAmigos.push(nombreDeAmigo);
        // console.log(`Amigo agregado: ${nombreDeAmigo}`);
-
-       limpiarCampoEntrada();
+       
     }
-    
+    limpiarCampoEntrada();
     //console.log(listaAmigos);
     //console.log(nombreDeAmigo);
     mostrarAmigoAgregado();
@@ -74,14 +73,18 @@ function verificarlistaAmigos () {
     //alert(listaAmigos.length === 0 ? 'Array vacío.' : 'Array lleno.');
     if (listaAmigos.length === 0) {
         //console.log('Ingrese un nombre válido.');
-    } else {
-        //generarIndiceAleatorio();
+    } /*else {
+       // generarIndiceAleatorio();
        // console.log('Nombre válido.');
-    } 
+    } */
     
 }
 //Esta función genera un número aleatorio entre 0 y el tamaño del array listaAmigos para elegir un amigo de la lista
 function sortearAmigo () {
+    if (listaAmigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return; // Sale de la función sin ejecutar el sorteo
+    }
     botonSortearAmigo = document.getElementById('amigoElegido')
     let indiceGenerado =  Math.floor(Math.random()*listaAmigos.length);
     let amigoSeleccionado = listaAmigos[indiceGenerado]; // la variable amigoSeleccionado almacena el amigo seleccionado
@@ -90,15 +93,20 @@ function sortearAmigo () {
     mostrarAmigoElegido.innerHTML = `El amigo sorteado es: ${amigoSeleccionado}`; //La variable mostrarAmigoElegido muestra el texto guardado en la variable amigoSeleccionado
     //console.log(amigoSeleccionado);
 
-    document.querySelector("#listaAmigos").innerHTML = ""; //Con este metodo borramos todo los elementos de una lista <ul>
-
-
+    document.querySelector("#listaAmigos").innerHTML = ""; //Con este metodo borramos todo los elementos de una lista <ul> Otra opción es declararlo como una función. Como la siguiente:
     
-    
+    listaAmigos = [];
+
   // limpiarListaAmigos();
+  /*function limpiarListaAmigos () {
+    document.querySelector('#listaAmigos').innerHTML = '';
+}*/
+    //condicionesIniciales();
+
 }
 
-/*function limpiarListaAmigos () {
-    document.querySelector('#listaAmigos').innerHTML = '';
+/*function condicionesIniciales () {
+    listaAmigos.length = 0;
     
+   // mostrarAmigoElegido.innerHTML = '';
 }*/
