@@ -38,7 +38,7 @@ function agregarAmigo() {
         // Si es un nombre válido, lo agregamos al array
         listaAmigos.push(nombreDeAmigo);
        // console.log(`Amigo agregado: ${nombreDeAmigo}`);
-       
+       document.getElementById('resultado').innerHTML = "";
     }
     limpiarCampoEntrada();
     //console.log(listaAmigos);
@@ -68,7 +68,7 @@ function mostrarAmigoAgregado () {
 }
 
 function verificarlistaAmigos () {
-    botonSortearAmigo = document.getElementById('amigoElegido');
+    botonSortearAmigo = document.getElementById('botonSortear');
     botonSortearAmigo.disabled = listaAmigos.length === 0;
     //console.log(listaAmigos.length === 0 ? 'Ingrese un nombre válido.' : generarIndiceAleatorio());
     //Resumi el condicional if con el operador ternario, pero no es adecuado para llamar a una función
@@ -98,16 +98,7 @@ function sortearAmigo () {
     
     listaAmigos = [];
 
-  // limpiarListaAmigos();
-  /*function limpiarListaAmigos () {
-    document.querySelector('#listaAmigos').innerHTML = '';
-}*/
-    //condicionesIniciales();
+    mostrarAmigoAgregado();
+    verificarlistaAmigos();
 
 }
-
-/*function condicionesIniciales () {
-    listaAmigos.length = 0;
-    
-   // mostrarAmigoElegido.innerHTML = '';
-}*/
