@@ -68,16 +68,18 @@ function mostrarAmigoAgregado () {
 }
 
 function verificarlistaAmigos () {
+    botonSortearAmigo = document.getElementById('amigoElegido');
+    botonSortearAmigo.disabled = listaAmigos.length === 0;
     //console.log(listaAmigos.length === 0 ? 'Ingrese un nombre válido.' : generarIndiceAleatorio());
     //Resumi el condicional if con el operador ternario, pero no es adecuado para llamar a una función
     //alert(listaAmigos.length === 0 ? 'Array vacío.' : 'Array lleno.');
-    if (listaAmigos.length === 0) {
+    /*if (listaAmigos.length === 0) {
         //console.log('Ingrese un nombre válido.');
-    } /*else {
+    }else {
        // generarIndiceAleatorio();
        // console.log('Nombre válido.');
     } */
-    
+    return;
 }
 //Esta función genera un número aleatorio entre 0 y el tamaño del array listaAmigos para elegir un amigo de la lista
 function sortearAmigo () {
@@ -85,7 +87,6 @@ function sortearAmigo () {
         alert("No hay amigos en la lista para sortear.");
         return; // Sale de la función sin ejecutar el sorteo
     }
-    botonSortearAmigo = document.getElementById('amigoElegido')
     let indiceGenerado =  Math.floor(Math.random()*listaAmigos.length);
     let amigoSeleccionado = listaAmigos[indiceGenerado]; // la variable amigoSeleccionado almacena el amigo seleccionado
 
