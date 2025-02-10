@@ -38,7 +38,7 @@ function agregarAmigo() {
         // Si es un nombre válido, lo agregamos al array
         listaAmigos.push(nombreDeAmigo);
        // console.log(`Amigo agregado: ${nombreDeAmigo}`);
-       document.getElementById('resultado').innerHTML = "";
+       //document.getElementById('resultado').innerHTML = "";
     }
     limpiarCampoEntrada();
     //console.log(listaAmigos);
@@ -94,11 +94,15 @@ function sortearAmigo () {
     mostrarAmigoElegido.innerHTML = `El amigo sorteado es: ${amigoSeleccionado}`; //La variable mostrarAmigoElegido muestra el texto guardado en la variable amigoSeleccionado
     //console.log(amigoSeleccionado);
 
-    document.querySelector("#listaAmigos").innerHTML = ""; //Con este metodo borramos todo los elementos de una lista <ul> Otra opción es declararlo como una función. Como la siguiente:
+    document.querySelector("#listaAmigos").innerHTML = ""; //Con este metodo borramos todo los elementos de una lista <ul>
     
-    listaAmigos = [];
+    listaAmigos = [];// Vacia el array con los amigos agregados
 
     mostrarAmigoAgregado();
     verificarlistaAmigos();
 
 }
+// Este evento borrar el mensaje cuando el usuario hace clic en el campo de entrada luego de haber sorteado. De esta manera reinicio el juego.
+document.getElementById('amigo').addEventListener('click', function() {
+    document.getElementById('resultado').innerHTML = "";
+});
