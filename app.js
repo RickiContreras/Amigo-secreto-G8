@@ -106,3 +106,10 @@ function sortearAmigo () {
 document.getElementById('amigo').addEventListener('click', function() {
     document.getElementById('resultado').innerHTML = "";
 });
+
+// Este evento detecta si la tecla "Enter" fue presionada para agregar el nombre ingresado en el array listaAmigos
+document.getElementById('amigo').addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        agregarAmigo(); // Llama a la función agregarAmigo()
+    }
+});
